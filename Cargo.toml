@@ -5,3 +5,4 @@ authors = ["TA Thanh Dinh <tathanhdinh@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+failure = "0.1.3"

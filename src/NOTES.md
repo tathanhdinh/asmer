@@ -1,0 +1,4 @@
+- Writing a Simple Parser in Rust (https://adriann.github.io/rust_parser.html)
+- Writing an Interpreter In Rust (https://chr4.org/blog/2016/12/09/writing-an-interpreter-in-rust/)
+- Gluon's parser (https://github.com/gluon-lang/gluon/blob/master/parser/src/token.rs)
+- Keystone: ks.cpp#ks_asm
