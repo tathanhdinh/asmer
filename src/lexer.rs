@@ -1,4 +1,5 @@
-use std::{str::Chars, iter::Peekable}
+use std::{str::Chars, iter::Peekable};
+use failure::{Error, Fail};
 
 // cf. include/llvm/MC/MCParser/MCAsmLexer.h#class AsmToken
 enum TokenKind {
@@ -40,10 +41,16 @@ enum TokenKind {
     Exclaim, ExclaimEqual,  // '!', '!='
     Percent, Hash,          // '%', '#'
 
-    Less, LessEqual, LessLess, LessGreater
+    Less, LessEqual, LessLess, LessGreater,
     Greater, GreaterEqual, GreaterGreater,
 
     At                     // '@'
+}
+
+#[derive(Debug, Fail)]
+pub enum LexingError {
+    #[fail(display = "invalid token: {}", _0)]
+    InvalidToken(String),
 }
 
 
